@@ -1,0 +1,13 @@
+[Unit]
+Description=rpi-nest-api-frontend - Serving web frontend for rpi-nest-api
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/rpi-nest-api-frontend/
+ExecStart=/usr/bin/node /var/rpi-nest-api-frontend/node_modules/.bin/ng serve --host 0.0.0.0 --disable-host-check=true --live-reload=false --hmr=false --watch=false
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target

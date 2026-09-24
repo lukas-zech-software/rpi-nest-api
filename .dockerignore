@@ -1,0 +1,10 @@
+node_modules/
+data/
+dist/
+docker/
+.husky/
+.env
+
+# sources and tests will be mounted in container
+src/
+test/

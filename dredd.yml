@@ -1,0 +1,22 @@
+color: true
+dry-run: null
+language: nodejs
+require: null
+init: false
+custom: {}
+names: false
+only: []
+header: []
+sorted: false
+user: null
+inline-errors: false
+details: false
+method: []
+loglevel: warn
+path: []
+hookfiles: ['test/system/hooks.js']
+blueprint: rpi-nest-api.spec.json
+endpoint: 'http://127.0.0.1:3000'
+server: 'npm run start:test'
+server-wait: 8
+

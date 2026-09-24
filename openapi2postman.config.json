@@ -1,0 +1,11 @@
+{
+  "folderStrategy": "Paths",
+  "requestNameSource": "Fallback",
+  "indentCharacter": "Tab",
+  "collapseFolders": true,
+  "includeAuthInfoInExample": true,
+  "alwaysInheritAuthentication": true,
+  "parametersResolution": "Example",
+  "requestParametersResolution": "Example",
+  "exampleParametersResolution": "Example"
+}

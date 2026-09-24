@@ -1,0 +1,14 @@
+[    9.546525] brcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM4345/6 wl0: Nov  1 2021 00:37:25 version 7.45.241 (1a2f2fa CY) FWID 01-703fd60
+[    9.844823] Bluetooth: hci0: BCM: features 0x2f
+[    9.846340] Bluetooth: hci0: BCM43455 37.4MHz Raspberry Pi 3+-0190
+[    9.846350] Bluetooth: hci0: BCM4345C0 (003.001.025) build 0382
+[   11.597824] bcmgenet fd580000.ethernet: configuring instance for external RGMII (RX delay)
+[   11.599209] bcmgenet fd580000.ethernet eth0: Link is Down
+[   11.728402] lan78xx 2-3:1.0 eth1: Link is Down
+[   12.688548] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   12.688563] Bluetooth: BNEP filters: protocol multicast
+[   12.688583] Bluetooth: BNEP socket layer initialized
+[   12.695645] Bluetooth: MGMT ver 1.22
+[   12.707286] NET: Registered PF_ALG protocol family
+[   15.684073] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   15.684541] bcmgenet fd580000.ethernet eth0: Link is Up - 1Gbps/Full - flow control rx/tx

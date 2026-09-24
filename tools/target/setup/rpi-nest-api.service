@@ -1,0 +1,14 @@
+[Unit]
+Description=rpi-nest-api - Public API for Raspberry-Nest devices
+After=network.target
+
+[Service]
+Type=simple
+Environment="SHELL=/bin/bash"
+WorkingDirectory=/var/rpi-nest-api
+ExecStart=/usr/bin/node /var/rpi-nest-api/dist/main.js
+User=api
+Group=rpi-nest
+
+[Install]
+WantedBy=multi-user.target

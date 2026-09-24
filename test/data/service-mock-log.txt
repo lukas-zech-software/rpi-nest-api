@@ -1,0 +1,15 @@
+Nov 04 05:10:05 Rpi105960 node[3090]: [Nest] 3090  - 11/04/2023, 5:10:05 AM VERBOSE [AuthenticationGuard] Authenticating request for device admin "admin"
+Nov 04 05:10:05 Rpi105960 node[3090]: [Nest] 3090  - 11/04/2023, 5:10:05 AM   DEBUG [ChildProcessService] Spawn command: [/usr/bin/uptime -s], options: [undefined]
+Nov 04 05:10:05 Rpi105960 node[3090]: [Nest] 3090  - 11/04/2023, 5:10:05 AM   DEBUG [ChildProcessService] Spawn command: [/usr/bin/df / --output=used,avail], options: [undefined]
+Nov 04 05:10:05 Rpi105960 node[3090]: [Nest] 3090  - 11/04/2023, 5:10:05 AM   DEBUG [ChildProcessService] Spawn command: [/usr/bin/pkexec --disable-internal-agent /usr/bin/vcgencmd measure_temp], options: [{"shell":true}]
+Nov 04 05:10:05 Rpi105960 node[3090]: [Nest] 3090  - 11/04/2023, 5:10:05 AM   DEBUG [ChildProcessService] Spawn command: [/usr/bin/pkexec --disable-internal-agent /usr/bin/vcgencmd measure_volts core], options: [{"shell":true}]
+Nov 04 05:10:06 Rpi105960 pkexec[3161]: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=999)
+Nov 04 05:10:06 Rpi105960 sudo[3161]:     root : PWD=/root ; USER=root ; COMMAND=/usr/sbin/rpi-nest-serial -t /dev/tpm0 -s
+Nov 04 05:10:06 Rpi105960 sudo[3161]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Nov 04 05:10:06 Rpi105960 pkexec[3168]: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=999)
+Nov 04 05:10:06 Rpi105960 pkexec[3168]: api: Executing command [USER=root] [TTY=unknown] [CWD=/var/rpi-nest-api] [COMMAND=/usr/bin/vcgencmd measure_temp]
+Nov 04 05:10:06 Rpi105960 pkexec[3171]: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=999)
+Nov 04 05:10:06 Rpi105960 pkexec[3171]: api: Executing command [USER=root] [TTY=unknown] [CWD=/var/rpi-nest-api] [COMMAND=/usr/bin/vcgencmd measure_volts core]
+Nov 04 05:10:07 Rpi105960 sudo[3161]: pam_unix(sudo:session): session closed for user root
+Nov 04 05:10:15 Rpi105960 node[3090]: [Nest] 3090  - 11/04/2023, 5:10:15 AM VERBOSE [AuthenticationGuard] Authenticating request for device admin "admin"
+Nov 04 05:10:16 Rpi105960 node[3090]: [Nest] 3090  - 11/04/2023, 5:10:16 AM VERBOSE [NetworkDeviceService] Getting details for device at /org/freedesktop/NetworkManager/Devices/1.

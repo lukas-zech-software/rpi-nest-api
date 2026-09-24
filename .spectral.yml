@@ -1,0 +1,35 @@
+extends:
+  - 'https://github.com/SPSCommerce/sps-api-standards/releases/download/v1.3.2/sps-api-standards.spectral.yml'
+  - 'https://unpkg.com/@stoplight/spectral-owasp-ruleset@1.4.0/dist/ruleset.js'
+rules:
+  sps-hosts-spscommerce-domain: 'off'
+  owasp:api4:2019-rate-limit: 'off'
+  owasp:api4:2019-rate-limit-responses-429: 'off'
+  owasp:api4:2019-string-limit: 'off'
+  owasp:api4:2019-string-restricted: 'off'
+  owasp:api4:2019-integer-limit-legacy: 'off'
+  owasp:api4:2019-array-limit: 'off'
+  # TODO: Use Problem Details for HTTP APIs (https://datatracker.ietf.org/doc/html/rfc7807))
+  sps-unknown-error-format: 'off'
+  # https is not yet supported on the device
+  owasp:api7:2019-security-hosts-https-oas3: 'off'
+  sps-hosts-https-only: 'off'
+  sps-hosts-no-port : 'off'
+overrides:
+  - files:
+      # This override targets the POST Route to /1authentication/login.
+      # The strange syntax is called JSON pointer [see the Spectral Documentation for details](https://docs.stoplight.io/docs/spectral/293426e270fac-overrides)
+      - "rpi-nest-api.spec.json#/paths/~1authentication~1login/post"
+      - "rpi-nest-api.spec.json#/paths/~1authentication~1update-password/post"
+      - "rpi-nest-api.spec.json#/paths/~1authentication~1reset-admin-password/post"
+    rules:
+      # authentication routes must not be protected as they are meant for unauthenticated users
+      owasp:api2:2019-protection-global-unsafe: "off"
+      owasp:api2:2019-protection-global-unsafe-strict: "off"
+      owasp:api3:2019-define-error-responses-401: "off"
+
+      # This override allows the root path to end with trailing slash
+  - files:
+      - "rpi-nest-api.spec.json#/paths/~1"
+    rules:
+      sps-paths-trailing-slash: "off"
